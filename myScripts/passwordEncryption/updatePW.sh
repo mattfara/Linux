@@ -43,10 +43,11 @@ then
 				break
 				;;
 			"n" ) 
-				read -sp "Enter new pw > " newPW; 
+				read -p "Enter new pw > " newPW; 
 				echo;
 				let lastLine=$(wc -l < $pwFile)+1;
-				sed -i "$lastLine"s/.*/"$newPW"/ $pwFile; 					tail -n 1 $pwFile | xclip -selection clipboard;
+				sed -i "$lastLine"s/.*/"$newPW"/ $pwFile; 					
+				tail -n 1 $pwFile | xclip -selection clipboard;
 				break
 				;;
 		esac
@@ -69,8 +70,9 @@ then
   rm $pwFile
 
   echo
+  
+  reset
   echo "file encrypted"
-  echo "Be sure to run the 'reset' command to clear sensitive info off CLI"
 else
   echo
   echo "failed to decrypt"

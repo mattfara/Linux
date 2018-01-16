@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#TEST OF SYM
 encrFile=~/pw/pw.gpg
 
 #get upcoming pw from user
