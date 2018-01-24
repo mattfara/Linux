@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dateToday=$(date -R | cut -f 1,2,3,4 -d " ")
-numericalDateToday=$(date --date="$headingToday" +"%s")
+numericalDateToday=$(date --date="$dateToday" +"%s")
 
 toDoPath=/home/matt/Documents/to-do.txt
 firstLineOfToDo=$(head -1 $toDoPath)
